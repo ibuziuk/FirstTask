@@ -6,17 +6,16 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Juice juice = new Juice();
-        juice = juice.creation();
-        juice.listMentioned();
-        final Juice finalJuice = juice;
+        Work juices = new Work();
+        juices.listOfMentioned();
+        final Work finalJuice = juices;
         Thread myThread = new Thread(new Runnable() {
             @Override
             public void run() {
-                finalJuice.sortList();
+                finalJuice.sortListOfMentioned();
             }
         });
         myThread.start();
-        juice.numberMin();
+        juices.numberWashesMin();
     }
 }
