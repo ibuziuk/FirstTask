@@ -1,0 +1,92 @@
+body {
+	margin-top: 0;
+	margin-bottom: 0;
+	min-width: 950px;
+}
+.container-fluid {
+	padding-left: 0;
+	padding-right: 0;
+}
+.block {
+	height: 130px;
+	background: #FEC63D;
+}
+.user,
+.logo {
+	margin-top: 5px;
+	text-align: center;
+}
+.name {
+	margin-top: 40px;
+	color: #840705; 
+	font-size: 60px;
+}
+.user-name {
+	margin-top: 5px;
+	text-align: right;
+	font-size: 20px;
+}
+.user-edit {
+	text-align: right;
+	color: #0844A4; 
+	font-size: 16px;
+}
+.block3 {
+	height: 34em;
+	background: #FEF8A0;
+}
+.btn-log_out {
+	background: #7D2709; 
+	border-color: #5E0202;
+	color: #FEFCE0; 
+	font-size: 16px;
+}
+.btn-log_out:hover {
+	box-shadow: inset 0 -1px 1px rgba(0,0,0,0), inset 0 1px 2px rgba(0,0,0,0), inset 0 0 0 60px rgba(255,255,0,.5);
+}
+.btn-log_out:active { 
+	padding: calc(.25em + 1px) .5em calc(.25em - 1px);
+	border-color: rgba(177,159,0,1);
+	box-shadow: inset 0 -1px 1px rgba(0,0,0,.1), inset 0 1px 2px rgba(0,0,0,.3), inset 0 0 0 60px rgba(255,255,0,.45); 
+}
+.btn-group {
+	margin-top: 10px;
+	margin-left: 17px;
+}
+.btn-checked {
+	background: #92D36E;
+}
+.btn-unchecked {
+	background: #F4EB49;	
+}
+.btn-delete,
+.btn-change,
+.btn-send {
+	background: #E6E6E6; 
+	border-color: #000000;
+	color: #000000; 
+	font-size: 16px;
+	width: 100px;
+}
+.talkTo {
+	margin-left: 17px; 
+	width: 206px; 
+	background: #F4EB49; 
+	font-size: 20px;	
+}
+.block6 {
+	height: 60px;
+	background: #FFA834;
+}
+.block2 {
+	width: 100%; 
+	height: 75%; 
+	margin-top: 10px; 
+	background: #E2EE79;
+	padding-left: 0;
+}
+.message {
+	margin-top: 10px;
+	resize: none;
+	background-color: #E2EE79;
+}
