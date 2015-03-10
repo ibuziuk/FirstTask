@@ -2,6 +2,13 @@ var number = -1;
 var del = false;
 var change = false;
 
+var uniqueId = function() {
+	var date = Date.now();
+	var random = Math.random() * Math.random();
+
+	return Math.floor(date * random).toString();
+};
+
 function run() {
 	var appContainer = document.getElementsByClassName('messaging')[0];
 	
@@ -28,6 +35,11 @@ function getUserName() {
 	
 	user.innerHTML = document.forms['login'].elements['username'].value;
 	document.forms['login'].elements['username'].value = "";
+	if(document.getElementById('loginButton').value == "Log out") {
+		document.getElementById('loginButton').value = "Log in";	
+	} else {
+		document.getElementById('loginButton').value = "Log out";
+	}
 }
 
 function buttonSendClicked() {
