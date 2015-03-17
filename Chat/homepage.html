@@ -12,20 +12,21 @@
 </head>
 
 <body onload="run();">
-<div class="container-fluid app-container main">
+<div class="container-fluid">
     <div class="row-fluid">
         <div class="span12 block">
             <div class="span2 logo"><img src="img/logo.png" alt="logo" width="120" height="120"/></div>
             <div class="span4"><h1 class="text name"><b><i>Chatterbox)</i></b></h1></div>
             <div class="span3 offset1  tmpGettingUserName" align="right">
-                <!-- <p class="user-name" id="user">sergey_sivchenko</p>
-                <p class="user-edit"><ins>Edit information</ins></p><br>
-                <a href="homepage.html"><button  type="submit" name="submit" class="btn btn-log_out pull-right">Log out</button></a> -->
                 <form name = "login">
-                    <!-- <p style="text-align: right;"><strong>User name:</strong></p> -->
+                    <strong>User name: </strong>
+                    <input type = "text" class = "message" maxlength = "25" size = "40" name = "username"><br>
                     <p id = "user" class="user-name"></p>
-                    <strong>User name: </strong><input type = "text" class = "message" maxlength = "25" size = "40" name = "username"><br>
                     <input id="loginButton" type = "button" class="btn" value = "Log in" onclick = "getUserName()">
+                    <!-- <p class="user-edit"><ins>Edit information</ins></p><br>
+                    <a href="homepage.html">
+                        <button  type="submit" name="submit" class="btn btn-log_out pull-right">Log out</button>
+                    </a> -->
                 </form>
             </div>
             <div class="span2 user"><img src="img/avatar.gif" alt="avatar" width="120" height="120"/></div>

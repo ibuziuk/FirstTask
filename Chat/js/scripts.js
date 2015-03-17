@@ -31,7 +31,7 @@ function delegateEvent(evtObj) {
 }
 
 function getUserName() {
-    var user = document.getElementById('user')
+    var user = document.getElementById('user');
 
     user.innerHTML = document.forms['login'].elements['username'].value;
     document.forms['login'].elements['username'].value = "";
@@ -48,7 +48,7 @@ function buttonSendClicked() {
 
     user.value = document.getElementById('user').innerHTML;
     if (user.value.localeCompare("") == 0) {
-        alert("Input your login!")
+        alert("Input your login!");
         return;
     }
     addMessage(message.value, user.value);
@@ -92,9 +92,8 @@ function messageClicked(item) {
 
 function deleteMessage(item) {
     var items = document.getElementsByClassName('messages')[0];
-    var i = 0;
 
-    for(i = 0; i < items.childNodes.length; i++) {
+    for(var i = 0; i < items.childNodes.length; i++) {
         if(items.childNodes[i] == item) {
             break;
         }
@@ -104,8 +103,8 @@ function deleteMessage(item) {
 
 function deletemessage(item) {
     var items = document.getElementsByClassName('messages')[0];
-    var element, i = 0;
-    for(i = 0; i < items.childNodes.length; i++)
+    var element;
+    for(var i = 0; i < items.childNodes.length; i++)
         if(items.childNodes[i] === item) {
             element = i;
             number = i;
