@@ -3,26 +3,26 @@ var del = false;
 var change = false;
 
 var uniqueId = function() {
-	var date = Date.now();
-	var random = Math.random() * Math.random();
+    var date = Date.now();
+    var random = Math.random() * Math.random();
 
-	return Math.floor(date * random).toString();
+    return Math.floor(date * random).toString();
 };
 
 function run() {
-	var appContainer = document.getElementsByClassName('messaging')[0];
-	
+    var appContainer = document.getElementsByClassName('messaging')[0];
+
     appContainer.addEventListener('click', delegateEvent);
 }
 
 function delegateEvent(evtObj) {
-	if(evtObj.type == 'click' && evtObj.target.classList.contains('btn-send')) {
+    if(evtObj.type == 'click' && evtObj.target.classList.contains('btn-send')) {
         buttonSendClicked(evtObj);
     }
-	if(evtObj.type == 'click' && evtObj.target.classList.contains('btn-change')) {
+    if(evtObj.type == 'click' && evtObj.target.classList.contains('btn-change')) {
         buttonChangeClicked(evtObj);
     }
-	if(evtObj.type == 'click' && evtObj.target.classList.contains('btn-delete')) {
+    if(evtObj.type == 'click' && evtObj.target.classList.contains('btn-delete')) {
         buttonDeleteClicked(evtObj);
     }
     if(evtObj.type == 'click' && evtObj.target.classList.contains('message')) {
@@ -32,73 +32,73 @@ function delegateEvent(evtObj) {
 
 function getUserName() {
     var user = document.getElementById('user')
-	
-	user.innerHTML = document.forms['login'].elements['username'].value;
-	document.forms['login'].elements['username'].value = "";
-	if(document.getElementById('loginButton').value == "Log out") {
-		document.getElementById('loginButton').value = "Log in";	
-	} else {
-		document.getElementById('loginButton').value = "Log out";
-	}
+
+    user.innerHTML = document.forms['login'].elements['username'].value;
+    document.forms['login'].elements['username'].value = "";
+    if(document.getElementById('loginButton').value == "Log out") {
+        document.getElementById('loginButton').value = "Log in";
+    } else {
+        document.getElementById('loginButton').value = "Log out";
+    }
 }
 
 function buttonSendClicked() {
     var message = document.getElementById('newMessage');
     var user = document.getElementById('user');
-	
+
     user.value = document.getElementById('user').innerHTML;
     if (user.value.localeCompare("") == 0) {
-		alert("Input your login!")
-		return;
-	}    
-	addMessage(message.value, user.value);    
-	message.value = '';
+        alert("Input your login!")
+        return;
+    }
+    addMessage(message.value, user.value);
+    message.value = '';
 }
 
 function addMessage(message, user) {
-	if (!message) {
+    if (!message) {
         return;
-	}
-	
-	var item = createDiv(message, user);
-	var items = document.getElementsByClassName('messages')[0];
-	
-	items.appendChild(item);
+    }
+
+    var item = createDiv(message, user);
+    var items = document.getElementsByClassName('messages')[0];
+
+    items.appendChild(item);
 }
 
 function buttonChangeClicked() {
-	change = true;
+    change = true;
 }
 
 function buttonDeleteClicked() {
-	del = true;
+    del = true;
 }
 
-function messageClicked(item) {	
+function messageClicked(item) {
     if (del) {
         deleteMessage(item);
-		del = false;
-		return;
+        del = false;
+        return;
     }
-	
+
     if (change) {
         var b = item.childNodes[2].textContent;
         document.forms['text'].elements['msg'].value = b;
         deletemessage(item);
-		change = false;
-		return;
+        change = false;
+        return;
     }
 }
 
 function deleteMessage(item) {
     var items = document.getElementsByClassName('messages')[0];
     var i = 0;
-	
+
     for(i = 0; i < items.childNodes.length; i++) {
         if(items.childNodes[i] == item) {
             break;
         }
-	}
+    }
     items.removeChild(items.childNodes[i]);
 }
 

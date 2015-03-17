@@ -1,117 +1,117 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8">
-		<meta name="author" content="Sergey Sivchenko" /> 
-		<title>Chatterbox)</title>
-		<!-- Bootstrap -->
-		<link href="D:/Проги/УП/Bootstrap 2.3.2/css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">
-		<script src="js/scripts.js"></script>
-	</head>
-	
-	<body onload="run();">
-		<div class="container-fluid app-container main">
-			<div class="row-fluid">
-				<div class="span12 block">
-					<div class="span2 logo"><img src="img/logo.png" alt="logo" width="120" height="120"/></div>
-					<div class="span4"><h1 class="text name"><b><i>Chatterbox)</i></b></h1></div>
-					<div class="span3 offset1  tmpGettingUserName" align="right">
-						<!-- <p class="user-name" id="user">sergey_sivchenko</p>
-						<p class="user-edit"><ins>Edit information</ins></p><br>
-						<a href="homepage.html"><button  type="submit" name="submit" class="btn btn-log_out pull-right">Log out</button></a> -->
-						<form name = "login">
-							<!-- <p style="text-align: right;"><strong>User name:</strong></p> -->
-							<p id = "user" class="user-name"></p>
-							<strong>User name: </strong><input type = "text" class = "message" maxlength = "25" size = "40" name = "username"><br>
-							<input id="loginButton" type = "button" class="btn" value = "Log in" onclick = "getUserName()">
-						</form>
-					</div>
-					<div class="span2 user"><img src="img/avatar.gif" alt="avatar" width="120" height="120"/></div>
-				</div>
-			</div>
-			
-			<div class="row-fluid">
-				<div class="span12 block3">
-					<div class="span3">
-					  <form>
-						<div class="btn-group">	
-							<a href="#" class="btn btn-unchecked">People</a>
-							<a href="#" class="btn btn-checked">Online</a>
-							<a href="#" class="btn btn-unchecked">Search</a>
-						</div>
-						<div>
-							<select class="talkTo" name="menu" size="3" multiple="multiple" style="height: 63vh;">
-								<option value="first">John</option>
-								<option value="second">Max</option>
-								<option selected="selected">Ann</option>
-								<option value="fourth">Mary</option>
-							</select>
-						</div>				  
-					  </form>
-					  
-					</div>
-					
-					<section class="messaging">						
-						<div class="span9">
-							<div class="row-fluid">
-								<div class="span10 block2 chat" style="height: 350px">
-									<div class = "messages">
-										<div class="message">Ann: Hello!)</div>									
-									</div>
-								</div>
-								<div class="span2 logo" style="margin-top: 10px">
-									<img align="center" src="img/avatar.gif" alt="avatar" width="110" height="110" />
-									<p align="center" style="font-size: 16px; margin-left: 5px">Ann</p>								
-								</div>
-							</div>
-							<div class = "row-fluid inputMessage">
-								<form name = "text">
-									<div class="span10">
-									
-										<input id = "newMessage" type = "text" class = "message" name = "msg" placeholder="Type your message here..."
-										style="width: 98%; height: 40px;">
-										<!-- <textarea id="newMessage" type="text" class="message" 
-										placeholder="Type your message here..." rows="4" cols="15" 
-										style="margin-top: 10px; width: 98%;  resize: none; background: #E2EE79"></textarea> --> 															
-									</div>
-									<div class="span2" style="margin-top: 10px; text-align: center">
-										<button type="button" name="submit" class="btn btn-change pull-down">Change</button>
-										<button type="button" name="submit" class="btn btn-delete pull-down">Delete</button>
-										<button type="button" name="submit" class="btn btn-send pull-down">Send</button>
-									</div>
-								</form>
-							</div>							
-						</div>
-					</section>			
-				</div>
-			</div>
-			
-			<div class="row-fluid">
-				<div class="span12 block6">
-					<div class="span2" style="text-align: center; margin-top: 15px"><img src="img/good.png" alt="good" width="30" height="30" /></div>
-					<div class="span4 offset2">
-						<nav style="text-align: center; margin-top: 15px"><a href="">About</a> | <a href="">Terms</a> | <a href="">Contact us</a> | <a href="">Settings</a> | <a href="">Help</a></nav><br>
-						<footer class="footer">
-							<p align="center" style="font-size: 12px; margin-top: -20px">&copy; Chatterbox 2015</p>
-						</footer>
-					</div>
-					<div class="span1 offset2">
-						<div class="btn-group dropup" style="margin-top: 15px">
-							<a href="#" class="btn">English</a>
-							<a href="#" class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="#">Russian</a></li>
-								<li><a href="#">Belarusian</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>		
-		</div>		
-	    <script src="http://code.jquery.com/jquery-latest.js"></script>
-	    <script src="bootstrap/js/bootstrap.min.js"></script>
-	</body>
-  
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Sergey Sivchenko" />
+    <title>Chatterbox)</title>
+    <!-- Bootstrap -->
+    <link href="css/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/scripts.js"></script>
+</head>
+
+<body onload="run();">
+<div class="container-fluid app-container main">
+    <div class="row-fluid">
+        <div class="span12 block">
+            <div class="span2 logo"><img src="img/logo.png" alt="logo" width="120" height="120"/></div>
+            <div class="span4"><h1 class="text name"><b><i>Chatterbox)</i></b></h1></div>
+            <div class="span3 offset1  tmpGettingUserName" align="right">
+                <!-- <p class="user-name" id="user">sergey_sivchenko</p>
+                <p class="user-edit"><ins>Edit information</ins></p><br>
+                <a href="homepage.html"><button  type="submit" name="submit" class="btn btn-log_out pull-right">Log out</button></a> -->
+                <form name = "login">
+                    <!-- <p style="text-align: right;"><strong>User name:</strong></p> -->
+                    <p id = "user" class="user-name"></p>
+                    <strong>User name: </strong><input type = "text" class = "message" maxlength = "25" size = "40" name = "username"><br>
+                    <input id="loginButton" type = "button" class="btn" value = "Log in" onclick = "getUserName()">
+                </form>
+            </div>
+            <div class="span2 user"><img src="img/avatar.gif" alt="avatar" width="120" height="120"/></div>
+        </div>
+    </div>
+
+    <div class="row-fluid">
+        <div class="span12 block3">
+            <div class="span3">
+                <form>
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-unchecked">People</a>
+                        <a href="#" class="btn btn-checked">Online</a>
+                        <a href="#" class="btn btn-unchecked">Search</a>
+                    </div>
+                    <div>
+                        <select class="talkTo" name="menu" size="3" multiple="multiple" style="height: 63vh;">
+                            <option value="first">John</option>
+                            <option value="second">Max</option>
+                            <option selected="selected">Ann</option>
+                            <option value="fourth">Mary</option>
+                        </select>
+                    </div>
+                </form>
+
+            </div>
+
+            <section class="messaging">
+                <div class="span9">
+                    <div class="row-fluid">
+                        <div class="span10 block2 chat" style="height: 350px">
+                            <div class = "messages">
+                                <div class="message">Ann: Hello!)</div>
+                            </div>
+                        </div>
+                        <div class="span2 logo" style="margin-top: 10px">
+                            <img align="center" src="img/avatar.gif" alt="avatar" width="110" height="110" />
+                            <p align="center" style="font-size: 16px; margin-left: 5px">Ann</p>
+                        </div>
+                    </div>
+                    <div class = "row-fluid inputMessage">
+                        <form name = "text">
+                            <div class="span10">
+
+                                <input id = "newMessage" type = "text" class = "message" name = "msg" placeholder="Type your message here..."
+                                       style="width: 98%; height: 40px;">
+                                <!-- <textarea id="newMessage" type="text" class="message"
+                                placeholder="Type your message here..." rows="4" cols="15"
+                                style="margin-top: 10px; width: 98%;  resize: none; background: #E2EE79"></textarea> -->
+                            </div>
+                            <div class="span2" style="margin-top: 10px; text-align: center">
+                                <button type="button" name="submit" class="btn btn-change pull-down">Change</button>
+                                <button type="button" name="submit" class="btn btn-delete pull-down">Delete</button>
+                                <button type="button" name="submit" class="btn btn-send pull-down">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="row-fluid">
+        <div class="span12 block6">
+            <div class="span2" style="text-align: center; margin-top: 15px"><img src="img/good.png" alt="good" width="30" height="30" /></div>
+            <div class="span4 offset2">
+                <nav style="text-align: center; margin-top: 15px"><a href="">About</a> | <a href="">Terms</a> | <a href="">Contact us</a> | <a href="">Settings</a> | <a href="">Help</a></nav><br>
+                <footer class="footer">
+                    <p align="center" style="font-size: 12px; margin-top: -20px">&copy; Chatterbox 2015</p>
+                </footer>
+            </div>
+            <div class="span1 offset2">
+                <div class="btn-group dropup" style="margin-top: 15px">
+                    <a href="#" class="btn">English</a>
+                    <a href="#" class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Russian</a></li>
+                        <li><a href="#">Belarusian</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+
 </html>
