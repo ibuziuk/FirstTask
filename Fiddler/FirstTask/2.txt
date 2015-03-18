@@ -1,0 +1,12 @@
+GET http://192.168.10.6:999/chat?token=TN64EN HTTP/1.1
+Host: 192.168.10.6:999
+User-Agent: Composer
+Content-Length: 2
+
+
+
+HTTP/1.1 200 OK
+Date: Wed, 18 Mar 2015 22:00:05 GMT
+Content-length: 44
+
+{"messages":["some more)"],"token":"TN19EN"}
