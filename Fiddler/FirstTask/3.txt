@@ -1,0 +1,11 @@
+POST http://192.168.10.8:999/chat HTTP/1.1
+Host: 192.168.10.8:999
+User-Agent: Composer
+Content-Length: 29
+
+{"message":"Hello world !"}
+
+HTTP/1.1 200 OK
+Date: Sun, 22 Mar 2015 15:53:21 GMT
+Content-Length: 0
+
