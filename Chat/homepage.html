@@ -18,11 +18,11 @@
             <div class="span2 logo"><img src="img/logo.png" alt="logo" width="120" height="120"/></div>
             <div class="span4"><h1 class="text name"><b><i>Chatterbox)</i></b></h1></div>
             <div class="span3 offset1  tmpGettingUserName" align="right">
-                <form name = "login">
+                <form id="login">
                     <strong>User name: </strong>
-                    <input type = "text" class = "message" maxlength = "25" size = "40" name = "username"><br>
+                    <input type = "text" class = "message" maxlength = "25" size = "40" name = "username" id="userName" onkeydown="processEnter(event)" /><br>
                     <p id = "user" class="user-name"></p>
-                    <input id="loginButton" type = "button" class="btn" value = "Log in" onclick = "getUserName()">
+                    <input id="loginButton" type = "button" class="btn" onclick = "getUserName()" value="Log in"/>
                     <!-- <p class="user-edit"><ins>Edit information</ins></p><br>
                     <a href="homepage.html">
                         <button  type="submit" name="submit" class="btn btn-log_out pull-right">Log out</button>

@@ -15,6 +15,13 @@ function run() {
     appContainer.addEventListener('click', delegateEvent);
 }
 
+function processEnter(e) {
+    if (e.keyCode == '13') {
+       e.preventDefault();
+       getUserName();
+   }
+}
+
 function delegateEvent(evtObj) {
     if(evtObj.type == 'click' && evtObj.target.classList.contains('btn-send')) {
         buttonSendClicked(evtObj);
@@ -32,13 +39,16 @@ function delegateEvent(evtObj) {
 
 function getUserName() {
     var user = document.getElementById('user');
+    var userName = document.getElementById('userName');
+    var loginButton = document.getElementById('loginButton');
 
-    user.innerHTML = document.forms['login'].elements['username'].value;
-    document.forms['login'].elements['username'].value = "";
-    if(document.getElementById('loginButton').value == "Log out") {
-        document.getElementById('loginButton').value = "Log in";
+    user.innerHTML = userName.value;
+    userName.value = ""
+
+    if (loginButton.value == "Log out") {
+        loginButton.value = "Log in";
     } else {
-        document.getElementById('loginButton').value = "Log out";
+        loginButton.value = "Log out";
     }
 }
 
